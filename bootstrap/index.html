@@ -1,0 +1,956 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+    <title>bootstrap notes.</title>
+    <link href="style.css" rel="stylesheet" type="text/css" />
+  </head>
+<body data-spy="scroll" data-target="#myScrollspy" data-offset="20">
+    
+    <div class="col-lg-1">
+      </div>
+    <nav class="col-sm-2" id="myScrollspy">
+      <ul class="nav nav-pills nav-stacked" data-spy="affix" data-offset-top="205">
+        <li class="active" id="plswork"> <a href = "#intro">intro. </a> </li> 
+        <li id="plswork"> <a href = "#grids"> grids. </a></li> 
+        <li id="plswork"> <a href = "#typography"> typography. </a> </li> 
+        <li id="plswork"> <a href = "#tables"> tables. </a> </li> 
+        <li id="plswork"> <a href = "#pics"> img. </a> </li> 
+        <li id="plswork"> <a href = "#alert"> alert. </a> </li> 
+        <li id="plswork"> <a href = "#buttons"> buttons. </a> </li> 
+        <li id="plswork"> <a href = "#drop-down"> drop-down. </a> </li> 
+        <li id="plswork"> <a href = "#navi"> navigation bars. </a> </li> 
+        <li id="plswork"> <a href = "#carousel">  carousel. </a> </li>
+        <li id="plswork"> <a href = "#modal">  modal. </a> </li>
+        <li id="plswork"> <a href = "#scrollspy">  scrollspy. </a> </li> 
+      </ul>
+    </nav>
+    <div class="col-lg-1">
+      </div>
+    <div class="col-lg-4">
+    <section id = head>
+
+      <div class = "share">
+        <a href="https://github.com/adabingw">adabingw</a>
+      </div> <br> <br>
+
+      <div class="share" id = 'home'>
+        <a href="https://awesome-animated-ray.glitch.me">html</a>
+        <a href="https://universal-powerful-pet.glitch.me">css</a>
+        <a href="https://github.com/adabingw">js</a>
+      </div> <br> <br> <br> <br>
+
+      <div class = "back">
+        <a href = "#home"> top </a>
+      </div>
+      <h1 class = 'title'>bootstrap.</h1>
+      <p>
+        <ul>
+          <li> Bootstrap is a free front-end framework for faster and easier web development. </li>
+          <li> Bootstrap includes HTML and CSS based design templates for typography, forms, buttons, tables, navigation, modals, image carousels and many other, as well as optional JavaScript plugins </li>
+          <li> Bootstrap also gives you the ability to easily create responsive designs </li>
+        </ul> 
+        Credits to W3SCHOOL for the wonderful course!
+        <br> <br>
+        <h3> table of contents. </h3>
+        <ol class = 'table-of-contents'>
+          <a href = "#intro"> <li> intro. </li> </a>
+          <a href = "#grids"> <li> grids. </li> </a>
+          <a href = "#typography"> <li> typography. </li> </a>
+          <a href = "#tables"> <li> tables. </li> </a> 
+          <a href = "#pics"> <li> img. </li> </a>
+          <a href = "#alert"> <li> alert. </li> </a>
+          <a href = "#buttons"> <li> buttons. </li> </a>
+          <a href = "#drop-down"> <li> drop-down. </li> </a>
+          <a href = "#navi"> <li> navigation bars. </li> </a>
+          <a href = "#carousel"> <li> carousel. </li> </a>
+          <a href = "#modal"> <li> modal. </li> </a>
+          <a href = "#scrollspy"> <li> scrollspy. </li> </a>
+          <br> <br>
+
+      </p>
+    </section>
+
+    <section id = intro class="container-fluid">
+      
+      <h2 class = 'header'> introduction. </h2>
+
+      <p>
+        To ensure proper rendering and touch zooming, add the following &lt;meta> tag inside the &lt;head> element:
+      </p>
+      <p class = 'code'>
+        &lt;meta name="viewport" content="width=device-width, initial-scale=1">
+      </p>
+      <h3> containers. </h3>
+      <p>
+        Bootstrap also requires a containing element to wrap site contents.
+        There are two container classes to choose from:
+      </p>
+      <p>
+        <ol>
+          <li> The <strong>.container</strong> class provides a responsive fixed width container </li>
+          <li> The <strong>.container-fluid</strong> class provides a full width container, spanning the entire width of the viewport </li>
+        </ol> <br> <br>
+      </p>
+
+      <img src='https://i.imgur.com/5CUxwsX.jpg' class = "center"/>
+
+    </section>
+
+    <section id = grids class="container-fluid">
+      <h2> grids. </h2>
+      <p>
+        Bootstrap's grid system allows up to 12 columns across the page. <br> <br>
+
+        If you do not want to use all 12 columns individually, you can group the columns together to create wider columns: <br> <br>
+
+        <img src='https://i.imgur.com/CdUQCgZ.jpg' class = "center"/> <br>
+
+        The Bootstrap grid system has four classes: <br> <br>
+
+        <ul>
+          <li> xs (for phones - screens less than 768px wide) </li>
+          <li> sm (for tablets - screens equal to or greater than 768px wide) </li>
+          <li> md (for small laptops - screens equal to or greater than 992px wide) </li> 
+          <li> lg (for laptops and desktops - screens equal to or greater than 1200px wide) </li>
+        </ul>
+
+        <h3> splittin' the page up evenly. </h3>
+          <p class = 'code'>
+            &lt;div class="row"> <br>
+              &lt;div class="col-sm-4">.col-sm-4&lt;/div> <br>
+              &lt;div class="col-sm-4">.col-sm-4&lt;/div> <br>
+              &lt;div class="col-sm-4">.col-sm-4&lt;/div> <br>
+            &lt;/div> <br>
+          </p>
+
+        <h3> splittin' the page up unevenly. </h3>
+          <p class = 'code'>
+            &lt;div class="row"> <br>
+              &lt;div class="col-sm-4">.col-sm-4lt;/div> <br>
+              &lt;div class="col-sm-8">.col-sm-8lt;/div> <br>
+            &lt;/div> <br>
+          </p>
+
+    </section>
+
+    <section id = typography class="container-fluid">
+      <h2 class = 'header'> typography. </h2>
+      
+
+        <h3>small.</h3>
+        <p>
+          In Bootstrap the HTML <strong>small</strong> element is used to create a lighter, secondary text in any heading, check it out: <br> <br> <p>
+            <h1>h1 heading <small>secondary text</small></h1>
+            <h2>h2 heading <small>secondary text</small></h2>
+            <h3>h3 heading <small>secondary text</small></h3>
+            <h4>h4 heading <small>secondary text</small></h4>
+            <h5>h5 heading <small>secondary text</small></h5>
+            <h6>h6 heading <small>secondary text</small></h6>
+
+        <h3> mark. </h3>
+        <p>
+          Bootstrap will style the HTML <code>mark</code> element in the following way: <br> <br>
+          
+          Use the mark element to <mark>highlight</mark> text.</p> <br><br>
+          
+
+        <h3> abbr. </h3>
+        <p>
+         The <code>abbr</code> element is used to mark up an abbreviation or acronym: <br> <br>
+            The <abbr title="World Health Organization">WHO</abbr> was founded in 1948.</p> <br>
+          <p class = 'code'>
+            The &lt;abbr title="World Health Organization">WHO&lt;/abbr> was founded in 1948. </p>
+        
+        <h3> blockquote. </h3>
+        <p>
+         The <code>blockquote</code> element is used to present content from another source:</p>
+            <blockquote>
+              <p>For 50 years, WWF has been protecting the future of nature. The world's leading conservation organization, WWF works in 100 countries and is supported by 1.2 million members in the United States and close to 5 million globally.</p>
+              <footer>From WWF's website</footer>
+            </blockquote> <br>
+          <p class = 'code'>
+            The &lt;abbr title="World Health Organization">WHO&lt;/abbr> was founded in 1948. </p>
+        
+        <h3> description lists. </h3>
+        <p>
+         The <code>dl</code> element indicates a description list:</p>
+          <dl>
+            <dt>Coffee</dt>
+            <dd>- black hot drink</dd>
+            <dt>Milk</dt>
+            <dd>- white cold drink</dd>
+          </dl>
+        <p class = 'code'>
+            &lt;dl> <br>
+              &lt;dt>Coffee&lt;/dt> <br>
+              &lt;dd>- black hot drink&lt;/dd> <br>
+              &lt;dt>Milk&lt;/dt> <br>
+              &lt;dd>- white cold drink&lt;/dd> <br>
+            &lt;/dl>      <br>
+        </p>
+
+        <h3> code snippets. </h3>
+        <p>
+          Inline snippets of code should be embedded in the <code>code</code> element: <br> <br>
+        
+          The following HTML elements: <code>span</code>, <code>section</code>, and <code>div</code> defines a section in a document. <br> <br>
+          <p class = 'code'>
+            &lt;code> lol &lt;/code> </p> 
+
+        <h3> keyboard input. </h3>
+        <p>
+          To indicate input that is typically entered via the keyboard, use the <code>kbd</code> element: <br> <br>
+          
+          Use <kbd>ctrl + p</kbd> to open the Print dialog box. <br> <br>
+          <p class = 'code'>
+            &lt;kbd> ctrl + p &lt;/kbd> </p>     
+
+        <h3> multiple code lines. </h3>
+        <p>
+          For multiple lines of code, use the pre element: <br> <br>
+          <pre>
+            Text in a pre element
+            is displayed in a fixed-width
+            font, and it preserves
+            both      spaces and
+            line breaks.
+            </pre> <br> <br>
+          <p class = 'code'>
+            &lt;pre> ctrl + p &lt;/pre> </p>
+
+        <h3> contexual colours. </h3>
+        <p>
+          Use the contextual classes to provide "meaning through colors": </p>
+            <p class="text-muted">This text is muted.</p>
+            <p class="text-primary">This text is important.</p>
+            <p class="text-success">This text indicates success.</p>
+            <p class="text-info">This text represents some information.</p>
+            <p class="text-warning" class = 'white'>This text represents a warning.</p>
+            <p class="text-danger">This text represents danger.</p>
+
+          <p class = 'code'>
+            &lt;p class="text-muted">This text is muted.&lt;/p> <br>
+            &lt;p class="text-primary">This text is important.&lt;/p> <br>
+            &lt;p class="text-success">This text indicates success.&lt;/p> <br>
+            &lt;p class="text-info">This text represents some information.&lt;/p> <br>
+            &lt;p class="text-warning">This text represents a warning.&lt;/p> <br>
+            &lt;p class="text-danger">This text represents danger.&lt;/p> <br> </p> 
+
+        <h3> contextual background. </h3>
+        <p>
+          Use the contextual background classes to provide "meaning through colors": <br> <br> </p>
+          <p class="bg-primary">This text is important.</p>
+          <p class="bg-success">This text indicates success.</p>
+          <p class="bg-info">This text represents some information.</p>
+          <p class="bg-warning">This text represents a warning.</p>
+          <p class="bg-danger">This text represents danger.</p> <br> <br>
+          <p class = 'code'>
+            &lt;p class="bg-primary">This text is important.&lt;/p>
+            &lt;p class="bg-success">This text indicates success.&lt;/p>
+            &lt;p class="bg-info">This text represents some information.&lt;/p>
+            &lt;p class="bg-warning">This text represents a warning.&lt;/p>
+            &lt;p class="bg-danger">This text represents danger.&lt;/p>
+          </p>
+        
+        <h3> more typography classes. </h3>
+        <p>
+          <ul>
+            <li><code>.lead</code>	Makes a paragraph stand out	</li> <br>
+            <li><code>.text-left</code>	Indicates left-aligned text	</li> <br>
+            <li><code>.text-center</code>	Indicates center-aligned text	 </li> <br>
+            <li><code>.text-right</code>	Indicates right-aligned text	</li> <br>
+            <li><code>.text-justify</code>	Indicates justified text	</li> <br>
+            <li><code>.text-nowrap</code>	Indicates no wrap text	</li> <br>
+            <li><code>.text-lowercase</code>	Indicates lowercased text	</li> <br>
+            <li><code>.text-uppercase</code>	Indicates uppercased text </li>	 <br>
+            <li><code>.text-capitalize</code>	Indicates capitalized text	</li> <br>
+            <li><code>.initialism</code>	Displays the text inside an &lt;abbr> element in a slightly smaller font size	</li> <br>
+            <li><code>.list-unstyled</code>	Removes the default list-style and left margin on list items. This class only applies to immediate children list items (to remove the default list-style from any nested lists, apply this class to any nested lists as well)	</li> <br>
+            <li><code>.list-inline</code>	Places all list items on a single line	</li> <br>
+            <li><code>.dl-horizontal</code>	Lines up the terms (&lt;dt>) and descriptions (&lt;dd>) in &lt;dl> elements side-by-side. Starts off like default &lt;dl>s, but when the browser window expands, it will line up side-by-side	</li> <br>
+            <li><code>.pre-scrollable</code>	Makes a &lt;pre> element scrollable </li> <br>
+          </ul>  
+        </p>
+
+    </section>
+
+    <section id = tables class="container-fluid">
+      <h2 class = 'header'> tables. </h2>
+
+        <h3> basic table. </h3>
+        <p>
+          CHECK OUT MY HTML NOTES FOR AN EXPLANATION OF THIS CODE <br>
+          <table class="table">
+          <thead>
+            <tr>
+              <th>Firstname</th>
+              <th>Lastname</th>
+              <th>Email</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>John</td>
+              <td>Doe</td>
+              <td>john@example.com</td>
+            </tr>
+            <tr>
+              <td>Mary</td>
+              <td>Moe</td>
+              <td>mary@example.com</td>
+            </tr>
+            <tr>
+              <td>July</td>
+              <td>Dooley</td>
+              <td>july@example.com</td>
+            </tr>
+          </tbody>
+        </table> </p>
+      
+      <h3> striped rows. </h3>
+        <p>
+          The <code>.table-striped</code> class adds zebra-stripes to a table: <br> <br> </p>
+          <p class = 'code'>
+            &lt;table class="table table-striped"> </p>
+      
+      <h3> bordered tables. </h3>
+        <p>
+          The <code>.table-bordered</code> class adds borders to a table: <br> <br> </p>
+          <p class = 'code'>
+            &lt;table class="table table-bordered"> </p>
+
+      <h3> bordered tables. </h3>
+        <p>
+          The <code>.table-bordered</code> class adds borders to a table: <br> <br> </p>
+          <p class = 'code'>
+            &lt;table class="table table-bordered"> </p>
+
+      <h3> hover rows. </h3>
+        <p>
+          The <code>.table-hover</code> class adds a hover effect (grey background color) on table rows: <br> <br> </p>
+          <p class = 'code'>
+            &lt;table class="table table-hover"> </p>
+      
+      <h3> condensed table. </h3>
+        <p>
+          The <code>.table-condensed</code> class makes a table more compact by cutting cell padding in half: <br> <br> </p>
+          <p class = 'code'>
+            &lt;table class="table table-condensed"> </p>
+
+      <h3> contexual classes. </h3>
+        <p>
+          Contextual classes can be used to color table rows (&lt;tr>) or table cells (&lt;td>): <br> <br> </p>
+          <p class = 'code'>
+            &lt;tr class="success"> </p>
+        <table class="table">
+          <thead>
+            <tr>
+              <th>Firstname</th>
+              <th>Lastname</th>
+              <th>Email</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Default</td>
+              <td>Defaultson</td>
+              <td>def@somemail.com</td>
+            </tr>      
+            <tr class="success">
+              <td>Success</td>
+              <td>Doe</td>
+              <td>john@example.com</td>
+            </tr>
+            <tr class="danger">
+              <td>Danger</td>
+              <td>Moe</td>
+              <td>mary@example.com</td>
+            </tr>
+            <tr class="info">
+              <td>Info</td>
+              <td>Dooley</td>
+              <td>july@example.com</td>
+            </tr>
+            <tr class="warning">
+              <td>Warning</td>
+              <td>Refs</td>
+              <td>bo@example.com</td>
+            </tr>
+            <tr class="active">
+              <td>Active</td>
+              <td>Activeson</td>
+              <td>act@example.com</td>
+            </tr>
+          </tbody>
+        </table>
+       <p>
+          <ul>
+            <li><code>.active</code>	Applies the hover color to the table row or table cell</li> <br>
+            <li><code>.success</code>	Indicates a successful or positive action</li> <br>
+            <li><code>.info</code>	Indicates a neutral informative change or action</li> <br>
+            <li><code>.warning</code>	Indicates a warning that might need attention</li> <br>
+            <li><code>.danger</code>	Indicates a dangerous or potentially negative action</li> <br>
+          </ul>
+        </p>
+
+        <h3> responsive table. </h3>
+        <p>
+          The <code>.table-responsive</code> class creates a responsive table. The table will then scroll horizontally on small devices (under 768px). When viewing on anything larger than 768px wide, there is no difference: <br> <br> </p>
+          <p class = 'code'>
+            &lt;div class="table-responsive"> </p>
+
+        <h3> responsive table. </h3>
+        <p>
+          The <code>.table-responsive</code> class creates a responsive table. The table will then scroll horizontally on small devices (under 768px). When viewing on anything larger than 768px wide, there is no difference: <br> <br> </p>
+          <p class = 'code'>
+            &lt;div class="table-responsive"> </p>
+        </section>
+
+      <section id = pics class="container-fluid">
+      <h2 class = 'header'> img. </h2>
+
+        <h3> rounded corners. </h3>
+          <p>
+          The <code>.img-rounded</code> class adds rounded corners to an image <br> <br> </p>
+          <p class = 'code'>
+            &lt;img src="cinqueterre.jpg" class="img-rounded" alt="Cinque Terre"> </p>
+
+        <h3> circle. </h3>
+          <p>
+          The <code>.img-circle</code> class shapes the image to a circle <br> <br> </p>
+          <p class = 'code'>
+            &lt;img src="cinqueterre.jpg" class="img-circle" alt="Cinque Terre"> </p>
+
+        <h3> thumbnail. </h3>
+          <p>
+            The <code>.img-thumbnail</code> class shapes the image to a thumbnail:
+          </p> <br><br>
+          <p class = 'code'>
+            &lt;img src="cinqueterre.jpg" class="img-thumbnail" alt="Cinque Terre"> </p>
+
+        <h3> responsive image. </h3>
+          <p>
+            Create responsive images by adding an <code>.img-responsive</code> class to the <img> tag. The image will then scale nicely to the parent element. <br> <br>
+
+            The .img-responsive class applies <code>display: block;</code> and <code>max-width: 100%;</code> and <code>height: auto;</code> to the image:
+          </p> <br>
+          <p class = 'code'>
+            &lt;img class="img-responsive" src="img_chania.jpg" alt="Chania"> </p>
+
+        <h3> responsive embeds. </h3>
+          <p>
+            Also let videos or slideshows scale properly on any device. <br> <br>
+
+            Classes can be applied directly to &lt;iframe>, &lt;embed>, &lt;video>, and &lt;object> elements. <br> <br>
+
+            The following example creates a responsive video by adding an <code>.embed-responsive-item</code> class to an &lt;iframe> tag (the video will then scale nicely to the parent element). The containing &lt;div> defines the aspect ratio of the video:
+          </p> <br>
+          <p class = 'code'>
+            &lt;div class="embed-responsive embed-responsive-16by9">
+              &lt;iframe class="embed-responsive-item" src="...">&lt;/iframe>
+            &lt;/div> </p>
+      </section>
+      
+      <section id = alert class="container-fluid">
+        <h2 class = 'header'> alerts. </h2>
+        <p>
+          Alerts are created with the <code>.alert</code> class, followed by one of the four contextual classes <code>.alert-success</code>, <code>.alert-info</code>, <code>.alert-warning</code> or <code>.alert-danger</code>:
+        </p>
+        <div class="alert alert-success">
+          <strong>Success!</strong> Indicates a successful or positive action.
+        </div>
+
+        <div class="alert alert-info">
+          <strong>Info!</strong> Indicates a neutral informative change or action.
+        </div>
+
+        <div class="alert alert-warning">
+          <strong>Warning!</strong> Indicates a warning that might need attention.
+        </div>
+
+        <div class="alert alert-danger">
+          <strong>Danger!</strong> Indicates a dangerous or potentially negative action.
+        </div>
+
+        <p class = 'code'>
+          &lt;div class="alert alert-success"> <br>
+            &lt;strong>Success!&lt;/strong> Indicates a successful or positive action. <br>
+          &lt;/div> <br> <br>
+
+          &lt;div class="alert alert-info"> <br>
+            &lt;strong>Info!&lt;/strong> Indicates a neutral informative change or action. <br>
+          &lt;/div> <br><br>
+
+          &lt;div class="alert alert-warning"> <br>
+            &lt;strong>Warning!&lt;/strong> Indicates a warning that might need attention. <br>
+          &lt;/div> <br><br>
+
+          &lt;div class="alert alert-danger"> <br>
+            &lt;strong>Danger!&lt;/strong> Indicates a dangerous or potentially negative action. <br>
+          &lt;/div> <br>
+        </p>
+
+      <h3> alert links. </h3>
+          <p>
+            Add the <code>alert-link</code> class to any links inside the alert box to create "matching colored links":
+          </p> <br>
+          <div class="alert alert-success">
+            <strong>Success!</strong> You should <a href="#alert" class="alert-link">read this message</a>.
+          </div> <br>
+          <p class = 'code'>
+            &lt;div class="alert alert-success"> <br>
+              &lt;strong>Success!&lt;/strong> You should &lt;a href="#" class="alert-link">read this message&lt;/a>. <br>
+            &lt;/div>  <br>
+          </p>
+
+      <h3> closing alerts. </h3>
+          <p>
+            To close the alert message, add a <code>.alert-dismissible</code> class to the alert container. Then add <code>class="close"</code> and <code>data-dismiss="alert"</code> to a link or a button element (when you click on this the alert box will disappear).
+          </p> <br>
+          <div class="alert alert-success alert-dismissible">
+            <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+            <strong>Success!</strong> Indicates a successful or positive action.
+          </div>
+
+          <p class = 'code'>
+            &lt;div class="alert alert-success alert-dismissible"> <br>
+              &lt;a href="#" class="close" data-dismiss="alert" aria-label="close">&times;&lt;/a> <br>
+              &lt;strong>Success!&lt;/strong> Indicates a successful or positive action. <br>
+            &lt;/div>  <br>
+          </p>
+
+      <h3> animated alerts. </h3>
+          <p>
+            The <code>.fade</code> and <code>.in</code> classes adds a fading effect when closing the alert message:
+          </p> <br>
+          <div class="alert alert-success alert-dismissible fade in">
+            <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+            <strong>Success!</strong> Indicates a successful or positive action.
+          </div>
+
+          <p class = 'code'>
+            &lt;div class="alert alert-success alert-dismissible fade in"> <br>
+              &lt;a href="#" class="close" data-dismiss="alert" aria-label="close">&times;&lt;/a> <br>
+              &lt;strong>Success!&lt;/strong> Indicates a successful or positive action. <br>
+            &lt;/div>  <br>
+          </p>
+
+      </section>
+
+      <section id = buttons class="container-fluid">
+        <h2 class = 'header'> buttons. </h2>
+          <h3> button styles. </h3>
+          <p>
+            Bootstrap has the following classes: <br>
+            <ul>
+              <li><code>.btn</code></li>
+              <li><code>.btn-default</code></li>
+              <li><code>.btn-primary</code></li>
+              <li><code>.btn-success</code></li>
+              <li><code>.btn-info</code></li>
+              <li><code>.btn-warning</code></li>
+              <li><code>.btn-danger</code></li>
+              <li><code>.btn-link</code></li>
+            </ul>
+           <br>
+
+          <button type="button" class="btn">Basic</button>
+          <button type="button" class="btn btn-default">Default</button>
+          <button type="button" class="btn btn-primary">Primary</button>
+          <button type="button" class="btn btn-success">Success</button>
+          <button type="button" class="btn btn-info">Info</button>
+          <button type="button" class="btn btn-warning">Warning</button>
+          <button type="button" class="btn btn-danger">Danger</button>
+          <button type="button" class="btn btn-link">Link</button>
+          <br> <br>
+          
+            The button classes can be used on an &lt;a>, &lt;button>, or &lt;input> element: <br>
+          </p>
+
+          <a href="#" class="btn btn-info" role="button">Link Button</a>
+          <button type="button" class="btn btn-info">Button</button>
+          <input type="button" class="btn btn-info" value="Input Button">
+          <input type="submit" class="btn btn-info" value="Submit Button"> <br> <br>
+
+          <p class = 'code'>
+            &lt;button type="button" class="btn">Basic&lt;/button> <br>
+            &lt;input type="button" class="btn btn-info" value="Input Button">
+          </p>
+
+        <h3> button groups. </h3>
+          <p>
+            Use a &lt;div> element with class <code>.btn-group</code> to create a button group. <br> <br>
+            <strong>Tip</strong>: Instead of applying button sizes to every button in a group, use class <code>.btn-group-lg|sm|xs</code> to size all buttons in the group. <br> <br>
+            Use the class <code>.btn-group-vertical</code> to create a vertical button group. <br> <br>
+            To span the entire width of the screen, use the <code>.btn-group-justified</code> class. <br> <br>
+            For &lt;button> elements, you must wrap each button in a .btn-group class:
+          </p> <br>
+
+          <p class = 'code'>
+            &lt;div class="btn-group btn-group-justified"> <br>
+            &lt;div class="btn-group"> <br>
+              &lt;button type="button" class="btn btn-primary">Apple&lt;/button>
+            &lt;/div><br>
+            &lt;div class="btn-group"> <br> 
+              &lt;button type="button" class="btn btn-primary">Samsung&lt;/button> <br>
+            &lt;/div> <br>
+            &lt;div class="btn-group"> <br>
+              &lt;button type="button" class="btn btn-primary">Sony&lt;/button> <br>
+            &lt;/div> <br>
+          &lt;/div><br>
+          </p>
+      
+      <h3> nesting buttons and dropdowns. </h3>
+
+          <p class = 'code'>
+            &lt;div class="btn-group"> <br>
+              &lt;button type="button" class="btn btn-primary">Apple&lt;/button> <br>
+              &lt;button type="button" class="btn btn-primary">Samsung&lt;/button> <br>
+            &lt;div class="btn-group"> <br>
+            &lt;button type="button" class="btn btn-primary dropdown-toggle"  data-toggle="dropdown"> <br>
+            Sony &lt;span class="caret">&lt;/span>&lt;/button> <br>
+              &lt;ul class="dropdown-menu" role="menu"> <br>
+                &lt;li>&lt;a href="#">Tablet&lt;/a>&lt;/li> <br>
+                &lt;li>&lt;a href="#">Smartphone&lt;/a>&lt;/li> <br>
+              &lt;/ul> <br>
+            &lt;/div> <br>
+            &lt;/div> <br>
+          </p>
+      </section>
+
+      <section id = drop-down class="container-fluid">
+        <h2 class = 'header'> drop down. </h2>
+        <p class = 'code'>
+            &lt;div class="dropdown"> <br>
+              &lt;button class="btn btn-primary dropdown-toggle" type="button"  data-toggle="dropdown">Dropdown Example <br>
+              &lt;span class="caret">&lt;/span>&lt;/button> <br>
+              &lt;ul class="dropdown-menu"> <br>
+                &lt;li>&lt;a href="#">HTML&lt;/a>&lt;/li> <br>
+                &lt;li>&lt;a href="#">CSS&lt;/a>&lt;/li> <br>
+                &lt;li>&lt;a href="#">JavaScript&lt;/a>&lt;/li> <br>
+              &lt;/ul> <br>
+            &lt;/div> <br>
+          </p>
+          <p>
+            The <code>.dropdown</code> class indicates a dropdown menu. <br><br>
+
+            To open the dropdown menu, use a button or a link with a class of <code>.dropdown-toggle</code> and the <code>data-toggle="dropdown"</code> attribute. <br><br>
+
+            The <code>.caret</code> class creates a caret arrow icon, which indicates that the button is a dropdown. <br><br>
+
+            Add the <code>.dropdown-menu</code> class to a ul element to actually build the dropdown menu. <br><br>
+        
+        <h3> drop down divider. </h3>
+
+          <p class = 'code'>
+            &lt;li class="divider">&lt;/li>
+          </p>
+
+        <h3> drop down header. </h3>
+
+          <p class = 'code'>
+            &lt;li class="dropdown-header">Dropdown header 1&lt;/li>
+          </p>
+
+        <h3> disable and active members. </h3>
+
+          <p class = 'code'>
+            &lt;li class="disabled">&lt;a href="#">CSS&lt;/a>&lt;/li> <br>
+            &lt;li class="active">&lt;a href="#">HTML&lt;/a>&lt;/li> <br>
+          </p>
+
+        <h3> collapsable button. </h3>
+
+          <p class = 'code'>
+            &lt;button data-toggle="collapse" data-target="#demo">Collapsible&lt;/button> <br>
+
+            &lt;div id="demo" class="collapse"> <br>
+            Lorem ipsum dolor text.... <br>
+            &lt;/div> <br>
+          </p>
+      </section>
+
+      <section id = navi class="container-fluid">
+        <h2 class = 'header'> navigation bars. </h2>
+          <nav class="navbar navbar-inverse">
+          <div class="container-fluid">
+            <div class="navbar-header">
+              <a class="navbar-brand" id="other" href="#">WebSiteName</a>
+            </div>
+            <ul class="nav navbar-nav">
+              <li class="active"><a href="#">Home</a></li>
+              <li id="other"><a href="#">Page 1</a></li>
+              <li id="other"><a href="#">Page 2</a></li>
+              <li id="other"><a href="#">Page 3</a></li>
+            </ul>
+          </div>
+        </nav> <br> <br>
+          <p class = 'code'>
+            &lt;nav class="navbar navbar-inverse"> <br>
+              &lt;div class="container-fluid"> <br>
+                &lt;div class="navbar-header"> <br>
+                  &lt;a class="navbar-brand" href="#">WebSiteName&lt;/a> <br>
+                &lt;/div> <br>
+                &lt;ul class="nav navbar-nav"> <br>
+                  &lt;li class="active">&lt;a href="#">Home&lt;/a>&lt;/li> <br>
+                  &lt;li>&lt;a href="#">Page 1&lt;/a>&lt;/li> <br>
+                  &lt;li>&lt;a href="#">Page 2&lt;/a>&lt;/li> <br>
+                  &lt;li>&lt;a href="#">Page 3&lt;/a>&lt;/li> <br>
+                &lt;/ul> <br>
+              &lt;/div> <br>
+            &lt;/nav> <br>
+          </p>
+      </section>
+
+      <section id = carousel class="container-fluid">
+        <h2 class = 'header'> carousel. </h2>
+          <div id="myCarousel" class="carousel slide" data-ride="carousel">
+            <!-- Indicators -->
+            <ol class="carousel-indicators">
+              <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+              <li data-target="#myCarousel" data-slide-to="1"></li>
+              <li data-target="#myCarousel" data-slide-to="2"></li>
+            </ol>
+
+            <!-- Wrapper for slides -->
+            <div class="carousel-inner">
+              <div class="item active">
+                <img src="https://i.pinimg.com/originals/cc/89/91/cc8991cf3142580ec8c3f7a1f2865b3a.jpg" alt="Chania">
+                <div class="carousel-caption">
+                  <h4><em>for you, a thousand times over.</em></h4>
+                  <p>- the kite runner</p>
+                </div>
+              </div>
+
+              <div class="item">
+                <img src="https://i.pinimg.com/originals/6d/e7/1b/6de71bf9d344113599b434c6ff4cb0f5.jpg" alt="Chicago">
+                <div class="carousel-caption">
+                  <h4><em>i had the epiphany that laughter was light, and light was laughter, and that this was the secret of the universe.</em></h4>
+                  <p>- the goldfinch</p>
+                </div>
+              </div>
+
+              <div class="item">
+                <img src="https://wallpaperaccess.com/full/5533564.jpg" alt="New York">
+                <div class="carousel-caption">
+                  <h4><em>forgive me, for all the things i did but mostly for the ones that i did not.</em></h4>
+                  <p>- the secret history</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Left and right controls -->
+            <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+              <span class="glyphicon glyphicon-chevron-left"></span>
+              <span class="sr-only">Previous</span>
+            </a>
+            <a class="right carousel-control" href="#myCarousel" data-slide="next">
+              <span class="glyphicon glyphicon-chevron-right"></span>
+              <span class="sr-only">Next</span>
+            </a>
+          </div>
+          <br>
+          <p class = 'code'>
+            &lt;div id="myCarousel" class="carousel slide" data-ride="carousel"> <br>
+              &lt;!-- Indicators --> <br>
+              &lt;ol class="carousel-indicators"> <br>
+                &lt;li data-target="#myCarousel" data-slide-to="0" class="active">&lt;/li> <br>
+                &lt;li data-target="#myCarousel" data-slide-to="1">&lt;/li> <br>
+                &lt;li data-target="#myCarousel"  data-slide-to="2">&lt;/li> <br>
+              &lt;/ol> <br> <br>
+
+              &lt;!-- Wrapper for slides --> <br>
+              &lt;div class="carousel-inner"> <br>
+                &lt;div class="item active"> <br>
+                  &lt;img src="la.jpg" alt="Chania"> <br>
+                  &lt;div class="carousel-caption"> <br>
+                    &lt;h3>Los Angeles&lt;/h3> <br>
+                    &lt;p>LA is always so much fun!&lt;/p> <br>
+                  &lt;/div> <br>
+                &lt;/div> <br><br>
+
+                &lt;div class="item"> <br>
+                  &lt;img src="chicago.jpg" alt="Chicago"> <br>
+                  &lt;div class="carousel-caption"> <br>
+                    &lt;h3>Chicago&lt;/h3> <br>
+                    &lt;p>Thank you, Chicago!&lt;/p> <br>
+                  &lt;/div> <br>
+                &lt;/div> <br><br>
+
+                &lt;div class="item"> <br>
+                  &lt;img src="ny.jpg" alt="New York"> <br>
+                  &lt;div class="carousel-caption"> <br>
+                    &lt;h3>New York&lt;/h3> <br>
+                    &lt;p>We love the Big Apple!&lt;/p> <br>
+                  &lt;/div> <br>
+                &lt;/div> <br>
+              &lt;/div> <br><br>
+
+              &lt;!-- Left and right controls --> <br>
+              &lt;a class="left carousel-control" href="#myCarousel" data-slide="prev"> <br>
+                &lt;span class="glyphicon glyphicon-chevron-left">&lt;/span> <br>
+                &lt;span class="sr-only">Previous&lt;/span> <br>
+              &lt;/a> <br>
+              &lt;a class="right carousel-control" href="#myCarousel" data-slide="next"> <br>
+                &lt;span class="glyphicon glyphicon-chevron-right">&lt;/span> <br>
+                &lt;span class="sr-only">Next&lt;/span> <br>
+              &lt;/a> <br>
+            &lt;/div> <br> <br>
+          </p>
+          <p>
+            <strong>The outermost div: </strong><br>
+
+            Carousels require the use of an id (in this case <code>id = "myCarousel"</code>) for carousel controls to function properly. <br><br>
+
+            The <code>class = "carousel"</code> specifies that this div contains a carousel. <br><br>
+
+            The <code>.slide</code> class adds a CSS transition and animation effect, which makes the items slide when showing a new item. Omit this class if you do not want this effect. <br><br>
+
+            The <code>data-ride="carousel"</code> attribute tells Bootstrap to begin animating the carousel immediately when the page loads. <br><br>
+
+            <strong>The "Indicators" part: </strong><br>
+
+            The indicators are the little dots at the bottom of each slide (which indicates how many slides there are in the carousel, and which slide the user is currently viewing).<br><br>
+
+            The indicators are specified in an ordered list with class <code>.carousel-indicators</code>. <br><br>
+
+            The <code>data-target</code> attribute points to the id of the carousel. <br><br>
+
+            The <code>data-slide-to</code> attribute specifies which slide to go to, when clicking on the specific dot. <br><br>
+
+            <strong>The "Wrapper for slides" part: </strong> <br>
+
+            The slides are specified in a div with class <code>.carousel-inner</code>. <br><br>
+
+            The content of each slide is defined in a div with class <code>.item</code>. This can be text or images. <br><br>
+
+            The <code>.active</code> class needs to be added to one of the slides. Otherwise, the carousel will not be visible. <br><br>
+
+            <strong>The "Left and right controls" part:</strong><br>
+
+            This code adds "left" and "right" buttons that allows the user to go back and forth between the slides manually. <br><br>
+
+            The data-slide attribute accepts the keywords "prev" or "next", which alters the slide position relative to its current position. <br><br>
+          </p>
+      </section>
+
+      <section id = 'modal' class="container-fluid">
+        <h3> modal. </h3>
+          <!-- Trigger the modal with a button -->
+            <button type="button" class="btn btn-info btn-lg" id="right" data-toggle="modal" data-target="#myModal">Open Modal</button>
+
+            <!-- Modal -->
+            <div id="myModal" class="modal fade" role="dialog">
+              <div class="modal-dialog">
+
+                <!-- Modal content-->
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    <h4 class="modal-title">Modal Header</h4>
+                  </div>
+                  <div class="modal-body">
+                    <p>Some text in the modal.</p>
+                  </div>
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                  </div>
+                </div>
+
+              </div>
+            </div> <br> <br>
+            <p class = 'code'>
+              &lt;!-- Trigger the modal with a button --> <br>
+                &lt;button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">Open Modal&lt;/button> <br><br>
+
+              &lt;!-- Modal --> <br>
+              &lt;div id="myModal" class="modal fade" role="dialog">
+              &lt;div class="modal-dialog"> <br><br>
+
+              &lt;!-- Modal content--> <br>
+                &lt;div class="modal-content"> <br>
+                &lt;div class="modal-header"> <br>
+              &lt;button type="button" class="close" data-dismiss="modal">&times;&lt;/button> <br>
+              &lt;h4 class="modal-title">Modal Header&lt;/h4> <br>
+              &lt;/div> <br>
+              &lt;div class="modal-body"> <br>
+              &lt;p>Some text in the modal.&lt;/p> <br>
+              &lt;/div> <br>
+            &lt;div class="modal-footer"> <br>
+              &lt;button type="button" class="btn btn-default" data-dismiss="modal">Close&lt;/button> <br>
+            &lt;/div> <br>
+                  &lt;/div> <br>
+
+                &lt;/div> <br>
+              &lt;/div> <br> <br>
+            </p>
+
+            <p>
+              <strong>The "Trigger" part:</strong><br>
+
+              To trigger the modal window, you need to use a button or a link. <br> <br>
+
+              Then include the two data-* attributes: <br><br>
+
+              <code>data-toggle="modal"</code> opens the modal window <br>
+              <code>data-target="#myModal"</code> points to the id of the modal <br><br>
+
+
+              <strong>The "Modal" part:</strong><br>
+
+              The parent div of the modal must have an ID that is the same as the value of the data-target attribute used to trigger the modal ("myModal"). <br><br>
+
+              The <code>.modal</code> class identifies the content of <div> as a modal and brings focus to it. <br><br>
+
+              The <code>.fade</code> class adds a transition effect which fades the modal in and out. Remove this class if you do not want this effect. <br><br>
+
+              The attribute <code>role="dialog"</code> improves accessibility for people using screen readers. <br><br>
+
+              The <code>.modal-dialog</code> class sets the proper width and margin of the modal.<br><br>
+
+              <strong>The "Modal content" part: </strong><br>
+
+              The <div> with <code>class="modal-content"</code> styles the modal (border, background-color, etc.). Inside this div, add the modal's header, body, and footer. <br><br>
+
+              The <code>.modal-header</code> class is used to define the style for the header of the modal. The button inside the header has a <code>data-dismiss="modal"</code> attribute which closes the modal if you click on it. The .close class styles the close button, and the .modal-title class styles the header with a proper line-height. <br><br>
+
+              The <code>.modal-body</code> class is used to define the style for the body of the modal. Add any HTML markup here; paragraphs, images, videos, etc. <br><br>
+
+              The <code>.modal-footer</code> class is used to define the style for the footer of the modal. Note that this area is right aligned by default. <br><br>
+            </p>
+      </section>
+
+      <section id = scrollspy class="container-fluid">
+        <h3> scrollspy </h3>
+          <p>
+            Here's the code, this took way too long...I don't feel like explaining lol :')) <br>
+          </p>
+          <p class="lonk" >
+          <a href = "https://www.w3schools.com/bootstrap/bootstrap_scrollspy.asp" class="lonk" > link to code.</a> <br> <br>
+          </p>
+      </section>
+
+      <section id = scrollspy class="container-fluid">
+        <h3> affix plugin </h3>
+          <p>
+            it's been a long day... <br> </p>
+          <p class="lonk">
+          <a href = "https://www.w3schools.com/bootstrap/bootstrap_affix.asp"> link to code.</a> <br> <br>
+          </p>
+      </section>
+
+    </div>
+    <div class="col-lg-4">
+    </div>
+    <script>
+      // document.body.innerHTML = "W";
+      </script>
+  </body>
+</html>

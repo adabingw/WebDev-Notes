@@ -1,0 +1,176 @@
+#head {
+    text-align: center;
+  }
+  
+  body {
+    position: relative;
+  }
+  
+  .title {
+    border-bottom: 2px solid white;
+    line-height: 1.9;
+  }
+  
+  ul.nav-pills {
+      top: 20px;
+      position: fixed;
+      font-size: 20px;
+      line-height: 1;
+    }
+  
+  
+  
+  .header {
+    border-top: 2px solid white;
+    line-height: 2;
+  }
+  
+  small {
+    color: white !important;
+  }
+  
+  * {
+    background-color: grey;
+    color: white;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  }
+  
+  .table {
+    text-align: center;
+  }
+  
+  ul, ol {
+    text-align: left !important;
+  }
+  
+  .code {
+    background: white;
+    color: black;
+    text-align: left;
+    padding-left: 30px;
+    padding: 30px;
+    border-radius: 3px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    text-align: center;
+  }
+  
+  .center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 70%;
+  }
+  
+  .share {
+    position: relative;
+    text-align: center;
+    top: 75px;
+    width: 100%;
+  }
+  
+  .share a {
+    color: white;
+    display: inline-block;
+    text-decoration: none;
+    padding: 14px;
+  }
+  
+  .share a:hover {
+    color: tan	;
+  }
+  
+  .lonk {
+    position: relative;
+    text-align: center;
+    width: 100%;
+  }
+  
+  .lonk a {
+    color: white;
+    display: inline-block;
+    text-decoration: none;
+  }
+  
+  .lonk a:hover {
+    color: tan	;
+  }
+  
+  .back {
+    background: grey;
+    border: 1px solid black;
+    border-radius: 2px;
+    color: white;
+    display: inline-block;
+    position: fixed;
+    bottom: 5px;
+    right: 15px;
+    padding: 10px;
+    font-size: 12px;
+  }
+  
+  .back a {
+    background: grey;
+    border: 1px solid grey;
+    border-radius: 2px;
+    color: white;
+    display: inline-block;
+    position: fixed;
+    bottom: 5px;
+    right: 15px;
+    padding: 10px;
+    font-size: 12px;
+  }
+  
+  .back a:hover {
+    color: white	;
+  }
+  
+  /* .carousel-caption {
+    font-family: 'Times New Roman', Times, serif;
+    font-style: italic;
+    /* padding: 5px;
+  } */
+  
+  .carousel-indicators {
+    background-color: transparent;
+  }
+  
+  li.active a { color: grey !important; background-color: white !important;}
+  
+  .nav{
+    /* color: white !important; */
+    /* background-color: white !important; */
+    /* background: white !important; */
+    line-height: 4;
+  }
+  
+  #other a:hover{
+    color: tan;
+  }
+  
+  #other a {
+    color: white;
+  }
+  
+  #plswork a:hover {
+    color: tan;
+    background-color: grey;
+  }
+  
+  #plswork a {
+    color: white;
+  }
+  
+  #right {
+    color: grey;
+    background-color: white;
+    border-color: white;
+    vertical-align: middle;
+  }
+  
+  .navbar-brand {
+    color: white !important;
+  }
